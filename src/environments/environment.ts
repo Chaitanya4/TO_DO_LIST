@@ -5,14 +5,14 @@
 export const environment = {
   production:true,
   firebase:{
-      apiKey: "AIzaSyDS3KHGWCMWYIGNrI2exh3ZFxPU1veRFd8",
-      authDomain: "todolistapp-bcca9.firebaseapp.com",
-      databaseURL: "https://todolistapp-bcca9.firebaseio.com",
-      projectId: "todolistapp-bcca9",
-      storageBucket: "todolistapp-bcca9.appspot.com",
-      messagingSenderId: "467330372276",
-      appId: "1:467330372276:web:e2a54229107ed02fab3de1",
-      measurementId: "G-DKJ6ETVXM6"
+    apiKey: "AIzaSyAmonQHhPo7FBViR-Qc7Qcdb15-X99ggr8",
+    authDomain: "todolistapp-480e5.firebaseapp.com",
+    databaseURL: "https://todolistapp-480e5.firebaseio.com",
+    projectId: "todolistapp-480e5",
+    storageBucket: "todolistapp-480e5.appspot.com",
+    messagingSenderId: "891376732752",
+    appId: "1:891376732752:web:7c62d5e00f035e8fd71f55",
+    measurementId: "G-3VS40QL3MP"
   }
 };
 

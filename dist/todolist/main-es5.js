@@ -81,7 +81,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     !*** ./node_modules/tslib/tslib.es6.js ***!
     \*****************************************/
 
-  /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault */
+  /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
 
   /***/
   function node_modulesTslibTslibEs6Js(module, __webpack_exports__, __webpack_require__) {
@@ -135,6 +135,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     __webpack_require__.d(__webpack_exports__, "__generator", function () {
       return __generator;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__createBinding", function () {
+      return __createBinding;
     });
     /* harmony export (binding) */
 
@@ -208,19 +214,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     __webpack_require__.d(__webpack_exports__, "__importDefault", function () {
       return __importDefault;
     });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function () {
+      return __classPrivateFieldGet;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function () {
+      return __classPrivateFieldSet;
+    });
     /*! *****************************************************************************
-    Copyright (c) Microsoft Corporation. All rights reserved.
-    Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-    this file except in compliance with the License. You may obtain a copy of the
-    License at http://www.apache.org/licenses/LICENSE-2.0
+    Copyright (c) Microsoft Corporation.
     
-    THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-    WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-    MERCHANTABLITY OR NON-INFRINGEMENT.
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
     
-    See the Apache Version 2.0 License for specific language governing permissions
-    and limitations under the License.
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
 
     /* global Reflect, Promise */
@@ -300,6 +318,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function __awaiter(thisArg, _arguments, P, generator) {
+      function adopt(value) {
+        return value instanceof P ? value : new P(function (resolve) {
+          resolve(value);
+        });
+      }
+
       return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) {
           try {
@@ -318,9 +342,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         function step(result) {
-          result.done ? resolve(result.value) : new P(function (resolve) {
-            resolve(result.value);
-          }).then(fulfilled, rejected);
+          result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
         }
 
         step((generator = generator.apply(thisArg, _arguments || [])).next());
@@ -438,17 +460,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
+    function __createBinding(o, m, k, k2) {
+      if (k2 === undefined) k2 = k;
+      o[k2] = m[k];
+    }
+
     function __exportStar(m, exports) {
       for (var p in m) {
-        if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+        if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
       }
     }
 
     function __values(o) {
-      var m = typeof Symbol === "function" && o[Symbol.iterator],
+      var s = typeof Symbol === "function" && Symbol.iterator,
+          m = s && o[s],
           i = 0;
       if (m) return m.call(o);
-      return {
+      if (o && typeof o.length === "number") return {
         next: function next() {
           if (o && i >= o.length) o = void 0;
           return {
@@ -457,6 +485,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           };
         }
       };
+      throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
     }
 
     function __read(o, n) {
@@ -620,14 +649,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (mod != null) for (var k in mod) {
         if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
       }
-      result.default = mod;
+      result["default"] = mod;
       return result;
     }
 
     function __importDefault(mod) {
       return mod && mod.__esModule ? mod : {
-        default: mod
+        "default": mod
       };
+    }
+
+    function __classPrivateFieldGet(receiver, privateMap) {
+      if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+      }
+
+      return privateMap.get(receiver);
+    }
+
+    function __classPrivateFieldSet(receiver, privateMap, value) {
+      if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+      }
+
+      privateMap.set(receiver, value);
+      return value;
     }
     /***/
 
@@ -746,10 +792,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selector: 'app-root',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./app.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html")).default,
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html"))["default"],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./app.component.scss */
-      "./src/app/app.component.scss")).default]
+      "./src/app/app.component.scss"))["default"]]
     })], AppComponent);
     /***/
   },
@@ -796,13 +842,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _angular_fire__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/fire */
-    "./node_modules/@angular/fire/es2015/index.js");
+    "./node_modules/@angular/fire/fesm2015/angular-fire.js");
     /* harmony import */
 
 
     var _angular_fire_database__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/fire/database */
-    "./node_modules/@angular/fire/database/es2015/index.js");
+    "./node_modules/@angular/fire/fesm2015/angular-fire-database.js");
     /* harmony import */
 
 
@@ -877,11 +923,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/fire/database */
-    "./node_modules/@angular/fire/database/es2015/index.js");
+    "./node_modules/@angular/fire/fesm2015/angular-fire-database.js");
 
-    var TodoService =
-    /*#__PURE__*/
-    function () {
+    var TodoService = /*#__PURE__*/function () {
       function TodoService(firebasedb) {
         _classCallCheck(this, TodoService);
 
@@ -993,9 +1037,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./shared/todo.service */
     "./src/app/todo/shared/todo.service.ts");
 
-    var TodoComponent =
-    /*#__PURE__*/
-    function () {
+    var TodoComponent = /*#__PURE__*/function () {
       function TodoComponent(toDoService) {
         _classCallCheck(this, TodoComponent);
 
@@ -1052,11 +1094,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selector: 'app-todo',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./todo.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/todo/todo.component.html")).default,
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/todo/todo.component.html"))["default"],
       providers: [_shared_todo_service__WEBPACK_IMPORTED_MODULE_2__["TodoService"]],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./todo.component.scss */
-      "./src/app/todo/todo.component.scss")).default]
+      "./src/app/todo/todo.component.scss"))["default"]]
     })], TodoComponent);
     /***/
   },
@@ -1093,14 +1135,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var environment = {
       production: true,
       firebase: {
-        apiKey: "AIzaSyDS3KHGWCMWYIGNrI2exh3ZFxPU1veRFd8",
-        authDomain: "todolistapp-bcca9.firebaseapp.com",
-        databaseURL: "https://todolistapp-bcca9.firebaseio.com",
-        projectId: "todolistapp-bcca9",
-        storageBucket: "todolistapp-bcca9.appspot.com",
-        messagingSenderId: "467330372276",
-        appId: "1:467330372276:web:e2a54229107ed02fab3de1",
-        measurementId: "G-DKJ6ETVXM6"
+        apiKey: "AIzaSyAmonQHhPo7FBViR-Qc7Qcdb15-X99ggr8",
+        authDomain: "todolistapp-480e5.firebaseapp.com",
+        databaseURL: "https://todolistapp-480e5.firebaseio.com",
+        projectId: "todolistapp-480e5",
+        storageBucket: "todolistapp-480e5.appspot.com",
+        messagingSenderId: "891376732752",
+        appId: "1:891376732752:web:7c62d5e00f035e8fd71f55",
+        measurementId: "G-3VS40QL3MP"
       }
     };
     /*
@@ -1163,7 +1205,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
     }
 
-    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"]).catch(function (err) {
+    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])["catch"](function (err) {
       return console.error(err);
     });
     /***/
@@ -1180,7 +1222,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /home/chaitanya/Downloads/Angular/ToDoApplication(P3)/todolist/TO_DO_LIST/src/main.ts */
+    /*! /home/chaitanya/Downloads/Angular/ToDoApplication(P3)/todolist/src/main.ts */
     "./src/main.ts");
     /***/
   }

@@ -9,7 +9,7 @@
 
   /***/
   function node_modulesAngularDevkitBuildAngularSrcAngularCliFilesPluginsRawCssLoaderJsNode_modulesPostcssLoaderSrcIndexJsNode_modulesSassLoaderLibLoaderJsSrcStylesScss(module, exports) {
-    module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n.hover-cursor {\n  cursor: pointer;\n}\nhtml, body {\n  margin: 0px;\n  height: 100%;\n  background-color: #d6d3ea;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NoYWl0YW55YS9Eb3dubG9hZHMvQW5ndWxhci9Ub0RvQXBwbGljYXRpb24oUDMpL3RvZG9saXN0L1RPX0RPX0xJU1Qvc3JjL3N0eWxlcy5zY3NzIiwic3JjL3N0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUFBO0FBQ0E7RUFDSSxlQUFBO0FDQ0o7QURDQTtFQUNJLFdBQUE7RUFDQSxZQUFBO0VBQ0EseUJBQUE7QUNFSiIsImZpbGUiOiJzcmMvc3R5bGVzLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBZb3UgY2FuIGFkZCBnbG9iYWwgc3R5bGVzIHRvIHRoaXMgZmlsZSwgYW5kIGFsc28gaW1wb3J0IG90aGVyIHN0eWxlIGZpbGVzICovXG4uaG92ZXItY3Vyc29ye1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cbmh0bWwsYm9keXtcbiAgICBtYXJnaW46IDBweDtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Q2ZDNlYTs7XG59XG4iLCIvKiBZb3UgY2FuIGFkZCBnbG9iYWwgc3R5bGVzIHRvIHRoaXMgZmlsZSwgYW5kIGFsc28gaW1wb3J0IG90aGVyIHN0eWxlIGZpbGVzICovXG4uaG92ZXItY3Vyc29yIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG5odG1sLCBib2R5IHtcbiAgbWFyZ2luOiAwcHg7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Q2ZDNlYTtcbn0iXX0= */", '', '']];
+    module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n.hover-cursor {\n  cursor: pointer;\n}\nhtml, body {\n  margin: 0px;\n  height: 100%;\n  background-color: #d6d3ea;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NoYWl0YW55YS9Eb3dubG9hZHMvQW5ndWxhci9Ub0RvQXBwbGljYXRpb24oUDMpL3RvZG9saXN0L3NyYy9zdHlsZXMuc2NzcyIsInNyYy9zdHlsZXMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw4RUFBQTtBQUNBO0VBQ0ksZUFBQTtBQ0NKO0FEQ0E7RUFDSSxXQUFBO0VBQ0EsWUFBQTtFQUNBLHlCQUFBO0FDRUoiLCJmaWxlIjoic3JjL3N0eWxlcy5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuLmhvdmVyLWN1cnNvcntcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5odG1sLGJvZHl7XG4gICAgbWFyZ2luOiAwcHg7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNkNmQzZWE7O1xufVxuIiwiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuLmhvdmVyLWN1cnNvciB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuaHRtbCwgYm9keSB7XG4gIG1hcmdpbjogMHB4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNkNmQzZWE7XG59Il19 */", '', '']];
     /***/
   },
 
@@ -353,7 +353,7 @@
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /home/chaitanya/Downloads/Angular/ToDoApplication(P3)/todolist/TO_DO_LIST/src/styles.scss */
+    /*! /home/chaitanya/Downloads/Angular/ToDoApplication(P3)/todolist/src/styles.scss */
     "./src/styles.scss");
     /***/
   }
